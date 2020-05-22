@@ -8,11 +8,7 @@ a2 = ['a', 'c', 'b']
 def hash(a)
   h = {}
   a.each do |e|
-    if h[e]
-      h[e] += 1
-    else
-      h[e] = 1
-    end
+    h[e] ? h[e] += 1 : h[e] = 1
   end
   h
 end
